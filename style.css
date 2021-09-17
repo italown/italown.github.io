@@ -1,0 +1,240 @@
+@font-face {
+    font-family: BebasNeue;
+    src: url(fontes/BebasNeue-Regular.ttf);
+ }
+@font-face {
+    font-family: Montserrat;
+    src: url(fontes/Montserrat-Regular.ttf);
+}
+body {
+    font-family: Montserrat;
+}
+/*Index*/
+.titulo-menu {
+    font-family: BebasNeue;
+    margin-top: 7%;
+    text-align: center;
+    flex-wrap: wrap;
+    font-size: 3.5em;
+}
+.titulo-footer{
+    font-family: BebasNeue;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.navbar div{
+    background-color: white;
+}
+ 
+.header p{
+    margin-bottom: 3%;
+    text-align: center;
+}
+ 
+.main div p{
+    font-size: 1.2em;
+    text-decoration:underline;
+}
+ 
+.main div a{
+    text-decoration: none;
+}
+.expandir{
+    width: 90%;
+    transition: .1s ease-in-out;
+}
+.expandir:hover{
+    transition: .5s ease-in-out;
+    width: 75%;
+}
+.espaco-div {
+    margin-top: 50px;
+}
+ 
+.texto-menu{
+    margin-top: 50px;
+    margin-bottom: 100px;
+    color: #0D0D0D;
+}
+ 
+.ilustrativa {
+    width: 70%;
+    margin-top: 10%;
+}
+ 
+.footer div img{
+    width: 100%;
+}
+ 
+.footer div ul li a {
+    color: #0D0D0D;
+}
+.main{
+    background-color: white;
+}
+.fundo-amarelo{
+    background-color: #F2E530;
+}
+/*Mulheres*/
+.direita{
+    text-align: right;
+}
+.subtitulo{
+    font-family: Montserrat;
+    font-weight: 700;
+    margin-bottom: -4px;
+    margin-top: 40%;
+}
+.subtitulo-abaixo{
+    font-family: Montserrat;
+    font-weight: 700;
+    margin-top: -12px;
+    margin-bottom: 17px;
+}
+.titulo{
+    font-family: Montserrat;
+    font-weight: 700;
+}
+.titulo-grande{
+    font-family: Montserrat;
+    font-weight: 700;
+}
+.imagem-d{
+    margin-left: -40%;
+}
+.fundo-vermelho{
+    background-color: #FF271B;
+}
+.imagem-e{
+    margin-right: -80%;
+    transform: rotate(-10deg);
+}
+.tocha{
+    width: 150%;
+}
+.fundo-preto{
+    background-color: #0D0D0D;
+}
+.big-bang{
+    margin-right: -50%;
+    transform: rotate(-9deg);
+}
+.fundo-azul{
+    background-color: #0091FF;
+}
+.fundo-verde{
+    background-color: #03A61C;
+}
+.arqueira{
+    margin-right: -50%;
+}
+
+@media screen and (max-width: 750px){
+    .titulo{
+        font-size: 20px;
+    }
+    .subtitulo{
+        font-size: 16px;
+    }
+    .fonte{
+        font-size: 12px;
+    }
+    .tocha{
+        margin-right: -60%;
+        width: 300%;
+    }
+    .titulo-grande{
+        font-size: 12px;
+    }
+}
+
+/* Menu hamburguer */
+*,
+*:before,
+*:after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.menu{
+    width: 60px;
+    height: 60px;
+    background-color: #F2E530; 
+    border-radius: 50%;
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+    box-shadow: 0 0 0 0px #F2E530, 0 0 0 0px #F2E530;
+    transition: .8s ease-in-out;
+    z-index: 1000000;
+}
+.menu:hover{
+    box-shadow: 0 0 0 8px #F2E530, 0 0 0 8px #F2E530;
+    z-index: 100000;
+}
+.hamburguer{
+    display: block;
+    background-color: #0D0D0D;
+    width: 30px;
+    height: 2px;
+    position: relative;
+    top: 29px;
+    left: 15px;
+    transition: .5s ease-in-out;
+}
+.hamburguer:before,
+.hamburguer:after{
+    background-color: #0D0D0D;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: .5s ease-in-out;
+}
+.hamburguer:before{
+    top: -10px;
+}
+.hamburguer:after{
+    bottom: -10px;
+}
+input:checked ~ ul{
+    visibility: visible;
+}
+input:checked~label .menu{
+    box-shadow: 0 0 0 150vw #F2E530, 0 0 0 220vw #F2E530;
+}
+input:checked ~ label .hamburguer{
+    transform: rotate(45deg);
+}
+input:checked ~ label .hamburguer:before{
+    transform: rotate(90deg);
+    top:0;
+}
+input:checked ~ label .hamburguer:after{
+    transform: rotate(90deg);
+    bottom:0;
+}
+ul.ul-hamburguer{
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    transition: .25s .3s ease-in-out;
+    visibility: hidden;
+    z-index: 1000000;
+}
+a.li{
+    display: block;
+    color:#0D0D0D;
+    text-decoration: none;
+    text-align: center;
+    font-size: 150%;
+}
+a.li:hover{
+    color: #8C862A;
+    font-size: 170%;
+    transition: .3s ease-in-out;
+}
